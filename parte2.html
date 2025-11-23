@@ -51,9 +51,7 @@
           <li>Incluir <code>/src/style.css</code> en tu HTML.</li>
           <li>Levantar el servidor de desarrollo.</li>
         </ol>
-        <pre class="mt-4 p-4 bg-gray-100 dark:bg-gray-900 rounded text-xs overflow-x-auto"><code># Paso 1: crea proyecto y entra
-npm create vite@latest my-project
-cd my-project
+        <pre class="mt-4 p-4 bg-gray-100 dark:bg-gray-900 rounded text-xs overflow-x-auto"><code># Paso 1: crea proyecto y entra npm create vite@latest my-projectcd my-project
 
 # Paso 2: instala Tailwind + plugin Vite
 npm install tailwindcss @tailwindcss/vite
@@ -137,8 +135,8 @@ npm run dev
         <div class="mt-3 flex flex-wrap gap-3">
           <button class="btn">Base</button>
           <button class="btn btn-brand">Primario</button>
-          <button class="btn text-brand border border-brand/30 bg-transparent">Secundario</button>
-          <button class="btn bg-red-50 text-red-600 border border-red-200 hover:bg-red-100">Alerta</button>
+          <button class="btn btn-ghost">Secundario</button>
+          <button class="btn btn-danger">Alerta</button>
         </div>
         <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">Combina clases utilitarias en el HTML solo para lo que no pueda vivir en <code>@apply</code>.</p>
       </div>
@@ -167,11 +165,23 @@ npm run dev
   .btn {
     /* Botón base accesible y reutilizable */
     @apply inline-flex items-center justify-center rounded-md px-4 py-2
-           font-medium shadow-sm transition;
+           font-medium shadow-sm transition
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .btn-brand {
     /* Variante de marca: úsala junto a .btn en el HTML → class="btn btn-brand" */
     @apply bg-brand text-white hover:bg-brand/90;
+  }
+
+    /* Variante ghost */
+  .btn-ghost {
+    @apply bg-transparent text-gray-700 border border-gray-300
+           hover:bg-gray-100
+           dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700/50;
+  }
+
+    .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
   }
 
   .card {
