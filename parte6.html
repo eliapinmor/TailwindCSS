@@ -477,6 +477,64 @@ export function Example({ gridLayout }) {
           </div>
         </article>
       </div>
+      <!--mi solución-->
+      <div class="mt-4 rounded-lg border border-dashed border-gray-300 dark:border-gray-700 p-4">
+        <article class="grid gap-4 md:grid-cols-[auto,1fr] items-start rounded-xl bg-white dark:bg-slate-900 p-4 shadow"
+          role="region" aria-labelledby="product-title">
+          <!-- Placeholder de imagen -->
+          <figure class="size-24 rounded-lg bg-gradient-to-br from-brand/20 via-brand/10 to-transparent" role="img"
+            aria-label="Imagen de producto">
+          </figure>
+
+          <!-- Contenido -->
+          <div>
+            <!-- Badges -->
+            <div class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide">
+              <span class="px-2 py-1 rounded-full bg-brand/10 text-brand">UI Kit</span>
+              <span class="px-2 py-1 rounded-full border border-emerald-300 text-emerald-700 dark:text-emerald-300">
+                En stock
+              </span>
+              <!-- Alternativa de estado
+          <span class="px-2 py-1 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-300/20 dark:text-amber-200">
+            Bajo stock
+          </span>
+          -->
+            </div>
+
+            <!-- Título y descripción -->
+            <h3 id="product-title" class="mt-3 text-2xl font-bold text-gray-900 dark:text-gray-100">
+              El mejor componente
+            </h3>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+              El mejor curso para entender las bases de TODO.
+            </p>
+            <ul class="mt-4 list-disc pl-4 ">
+              <li>Con las tecnologías más usadas</li>
+              <li>Componentes totalmente responsivos</li>
+              <li>Compatible de todos los dispositivos y navegadores</li>
+            </ul>
+
+            <!-- Acciones -->
+            <div class="mt-4 flex flex-wrap gap-3">
+              <button class="btn btn-brand focus:outline-none focus:ring-2 focus:ring-brand/60" type="button"
+                aria-label="Comprar Component Pack">
+                Comprar
+              </button>
+              <button class="btn border border-gray-300 text-gray-700 dark:text-gray-200 hover:bg-gray-50
+                   dark:border-gray-700 dark:hover:bg-neutral-800
+                   focus:outline-none focus:ring-2 focus:ring-brand/40" type="button" aria-label="Abrir vista previa">
+                Vista previa
+              </button>
+            </div>
+
+            <!-- Extras opcionales -->
+            <div class="mt-4 flex flex-wrap items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+              <span class="rounded-md border border-gray-200 dark:border-gray-800 px-2 py-1">Pago de una vez</span>
+              <span class="rounded-md border border-gray-200 dark:border-gray-800 px-2 py-1">Materiales descargables</span>
+            </div>
+          </div>
+        </article>
+      </div>
 
       <!-- RETOS OPCIONALES -->
       <h3 class="mt-4 font-semibold text-sm text-gray-800 dark:text-gray-200">Retos unas vez resuelta la base</h3>
