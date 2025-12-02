@@ -8,7 +8,9 @@
    ========================== */
 @layer theme {
   @theme {
-    --color-brand: #2563eb; /* azul de marca → text-brand, bg-brand, etc. */
+    --color-brand: #2563eb;
+    --radius-card: 0.75rem;
+    --shadow-card: var(--shadow-md);
   }
 }
 
@@ -19,11 +21,23 @@
   .btn {
     /* Botón base accesible y reutilizable */
     @apply inline-flex items-center justify-center rounded-md px-4 py-2
-           font-medium shadow-sm transition;
+           font-medium shadow-sm transition
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
   .btn-brand {
     /* Variante de marca: úsala junto a .btn en el HTML → class="btn btn-brand" */
     @apply bg-brand text-white hover:bg-brand/90;
+  }
+
+    /* Variante ghost */
+  .btn-ghost {
+    @apply bg-transparent text-gray-700 border border-gray-300
+           hover:bg-gray-100
+           dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700/50;
+  }
+
+    .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700;
   }
 
   .card {
@@ -32,5 +46,17 @@
   }
   .card-title {
     @apply text-lg font-semibold mb-2;
+  }
+
+
+    .badge {
+    @apply inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold
+           rounded-full bg-brand/10 text-brand;
+  }
+
+    .panel {
+    @apply bg-white dark:bg-slate-900
+           border border-gray-200 dark:border-gray-800
+           shadow rounded-[--radius-card] p-4;
   }
 }
