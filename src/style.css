@@ -29,15 +29,25 @@
     @apply bg-brand text-white hover:bg-brand/90;
   }
 
-    /* Variante ghost */
+  /* Variante ghost */
   .btn-ghost {
     @apply bg-transparent text-gray-700 border border-gray-300
            hover:bg-gray-100
            dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700/50;
   }
 
-    .btn-danger {
+  .btn-catalogo {
+    @apply bg-transparent text-white border border-gray-300
+           hover:bg-gray-100 hover:text-black
+           dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700/50;
+  }
+
+  .btn-danger {
     @apply bg-red-600 text-white hover:bg-red-700;
+  }
+
+  .btn-suscribe {
+    @apply bg-cyan-600 text-white hover:bg-teal-700;
   }
 
   .card {
@@ -48,15 +58,36 @@
     @apply text-lg font-semibold mb-2;
   }
 
-
-    .badge {
+  .badge {
     @apply inline-flex items-center gap-1 px-3 py-1 text-xs font-semibold
            rounded-full bg-brand/10 text-brand;
   }
 
-    .panel {
+  .panel {
     @apply bg-white dark:bg-slate-900
            border border-gray-200 dark:border-gray-800
            shadow rounded-[--radius-card] p-4;
+  }
+
+  .panel-videogame {
+    @apply bg-white dark:bg-slate-900
+           border border-gray-200 dark:border-gray-800
+           shadow rounded-md p-4;
+  }
+
+  .chip-filter {
+    /* Estilos cuando está activo (aria-pressed="true") */
+
+    /* Más padding y forma más redondeada */
+    @apply px-4 py-2 rounded-full;
+
+    /* Estado activo aria-pressed="true" */
+    @apply aria-[pressed=true]:bg-indigo-600 
+           aria-[pressed=true]:text-white 
+           aria-[pressed=true]:border-transparent;
+  }
+
+  .title {
+    @apply text-4xl font-extrabold;
   }
 }
